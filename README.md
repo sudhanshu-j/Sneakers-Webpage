@@ -55,6 +55,7 @@ Project Structure:-
 
   sneakers-webpage/
 ├── index.html
+├── assets/
 ├── css/
 │   ├── styles.css
 |   ├── swiper-bundle.min.css
