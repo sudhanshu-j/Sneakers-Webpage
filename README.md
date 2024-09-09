@@ -53,20 +53,20 @@ Features
 
 Project Structure:- 
 
-  sneakers-webpage/
-├── index.html
-├── assets/
-├── css/
-│   ├── styles.css
-|   ├── swiper-bundle.min.css
-├── js/
-│   ├── main.js
-│   ├── swiper-bundle.min.js
-├── img/
-│   ├── img-1.png
-│   ├── img-2.png
-│   ├── ...
-├── README.md
+    sneakers-webpage/
+      ├── index.html
+      ├── assets/
+      ├── css/
+      │   ├── styles.css
+      |   ├── swiper-bundle.min.css
+      ├── js/
+      │   ├── main.js
+      │   ├── swiper-bundle.min.js
+      ├── img/
+      │   ├── img-1.png
+      │   ├── img-2.png
+      │   ├── ...
+      ├── README.md
 
 Enjoy browsing and showcasing sneakers with the Sneakers Webpage!
     
