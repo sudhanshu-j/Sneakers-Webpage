@@ -2,6 +2,10 @@
 
 This project is a responsive, animated website featuring Swiper.js for image sliders, custom scrollbars, and optimized layouts for different screen sizes. It provides a seamless user experience across various devices, including desktops, tablets, and mobile phones.
 
+## Live Demo
+
+🔴 [sneakerpulse](https://sneakerpulse.netlify.app)
+
 ## Table of Contents
 
 * [Overview](#overview)
