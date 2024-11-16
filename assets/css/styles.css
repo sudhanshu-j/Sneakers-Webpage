@@ -1,600 +1,596 @@
 /* google fonts */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"); 
+/* Imports the Montserrat font family with various weights from Google Fonts */
 
 /* css variable */
-:root {
-  --header-height: 3.5rem;
+:root { 
+  /* Defines global CSS variables for consistent design and easy customization */
+  
+  --header-height: 3.5rem; /* Height of the header */
 
   /* Colors */
-  --first-color: #8e3027;
-  --second-color: #027748;
-  --third-color: #9b6a2b;
-  --fourth-color: #1f283d;
-  --fifth-color: #715436;
-  --sixth-color: #0181d8;
-  --title-color: #1f1f1f;
-  --text-color: #8f8f8f;
-  --black-color: #0a0a0a;
-  --white-color: #ffffff;
-  --body-color: #f2f2f2;
+  --first-color: #8e3027; /* Primary color */
+  --second-color: #027748; /* Secondary color */
+  --third-color: #9b6a2b; /* Accent color */
+  --fourth-color: #1f283d; /* Dark background color */
+  --fifth-color: #715436; /* Muted brown color */
+  --sixth-color: #0181d8; /* Bright blue color */
+  --title-color: #1f1f1f; /* Main text color for titles */
+  --text-color: #8f8f8f; /* Secondary text color */
+  --black-color: #0a0a0a; /* Black color */
+  --white-color: #ffffff; /* White color */
+  --body-color: #f2f2f2; /* Background color for the body */
 
   /* fonts */
-
-  --body-font: "Montserrat", sans-serif;
-  --biggest-font-size: 2.25rem;
-  --h2-font-size: 1.25rem;
-  --normal-font-size: 0.938rem;
-  --small-font-size: 0.813rem;
+  --body-font: "Montserrat", sans-serif; /* Default font family */
+  --biggest-font-size: 2.25rem; /* Largest font size for headings */
+  --h2-font-size: 1.25rem; /* Font size for h2 elements */
+  --normal-font-size: 0.938rem; /* Default text font size */
+  --small-font-size: 0.813rem; /* Smaller text font size */
 
   /* font-weight */
-  --font-regular: 400;
-  --font-semi-bold: 600;
-  --font-bold: 700;
+  --font-regular: 400; /* Regular font weight */
+  --font-semi-bold: 600; /* Semi-bold font weight */
+  --font-bold: 700; /* Bold font weight */
 
   /* z-index */
-  --z-tooltip: 10;
-  --z-fixed: 100;
+  --z-tooltip: 10; /* Z-index for tooltips */
+  --z-fixed: 100; /* Z-index for fixed elements like headers */
 }
 
 /* Responsive typography */
 @media screen and (min-width: 1150px) {
   :root {
-    --biggest-font-size: 3.5rem;
-    --normal-font-size: 1rem;
-    --small-font-size: 0.875rem;
+    /* Adjusts font sizes for larger screens */
+    --biggest-font-size: 3.5rem; /* Larger font size for headings */
+    --normal-font-size: 1rem; /* Larger default text size */
+    --small-font-size: 0.875rem; /* Larger small text size */
   }
 }
 
 /* Common Styling */
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+* { 
+  box-sizing: border-box; /* Includes padding and border in element width/height */
+  padding: 0; /* Removes default padding from all elements */
+  margin: 0; /* Removes default margin from all elements */
 }
 
-body {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  color: var(--title-color);
-  width: 100%;
-  height: 120vh;
-  background-color: #d9afd9;
-  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+body { 
+  font-family: var(--body-font); /* Sets the default font family */
+  font-size: var(--normal-font-size); /* Sets the base font size */
+  color: var(--title-color); /* Sets the text color */
+  width: 100%; /* Makes the body span the full width of the viewport */
+  height: 120vh; /* Sets the height to 120% of the viewport height */
+  background-color: #d9afd9; /* Sets a purple background color */
+  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%); 
+  /* Adds a gradient background transitioning from purple to blue */
 }
 
-ul {
-  list-style: none;
+ul { 
+  list-style: none; /* Removes bullet points from unordered lists */
 }
 
-a {
-  text-decoration: none;
+a { 
+  text-decoration: none; /* Removes underlines from links */
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+img { 
+  display: block; /* Makes images block-level elements */
+  max-width: 100%; /* Ensures images do not exceed their container width */
+  height: auto; /* Maintains aspect ratio of images */
 }
 
 /* Reuseable CSS */
-.container {
-  max-width: 1120px;
-  margin-inline: 1.5rem;
+.container { 
+  max-width: 1120px; /* Limits the maximum width of the container */
+  margin-inline: 1.5rem; /* Adds horizontal margins */
 }
 
-.main {
-  overflow: hidden;
+.main { 
+  overflow: hidden; /* Hides any overflowing content */
 }
 
 /* Header & Nav */
 
-.header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: #97d9e1;
-  z-index: var(--z-fixed);
-  transition: box-shadow 0.5s;
+.header { 
+  position: fixed; /* Fixes the header to the top of the viewport */
+  width: 100%; /* Makes the header span the full width of the screen */
+  top: 0; /* Positions the header at the top */
+  left: 0; /* Aligns the header to the left */
+  background-color: #97d9e1; /* Sets a blue background color */
+  z-index: var(--z-fixed); /* Ensures the header stays above other elements */
+  transition: box-shadow 0.5s; /* Smoothly animates box-shadow changes */
 }
 
-.nav {
-  position: relative;
-  height: var(--header-height);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.nav { 
+  position: relative; /* Sets a relative position for nested elements */
+  height: var(--header-height); /* Sets the height of the navigation */
+  display: flex; /* Uses flexbox for layout */
+  justify-content: space-between; /* Spreads child elements evenly */
+  align-items: center; /* Aligns items vertically in the center */
 }
 
-.logo {
-  width: 30px;
-  cursor: pointer;
+.logo { 
+  width: 30px; /* Sets the logo width */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
 }
 
 .nav_close,
-.nav_toggle {
-  display: flex;
-  font-size: 1.5rem;
-  cursor: pointer;
+.nav_toggle { 
+  display: flex; /* Makes the element a flex container */
+  font-size: 1.5rem; /* Sets the font size */
+  cursor: pointer; /* Adds a pointer cursor for interactivity */
 }
 
-/*  Mobile Devices Navigation */
-
+/* Mobile Devices Navigation */
 @media screen and (max-width: 1023px) {
-  .nav-menu {
-    position: fixed;
-    left: -100%;
-    top: 0;
-    background-color: #8bc6ec;
-    background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
-    width: 100%;
-    height: 100%;
-    padding: 7rem 1.5rem 2.5rem 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: left 0.5s;
+  .nav-menu { 
+    position: fixed; /* Fixes the menu to the viewport */
+    left: -100%; /* Initially hides the menu off-screen */
+    top: 0; /* Aligns the menu to the top of the screen */
+    background-color: #8bc6ec; /* Sets a light blue background */
+    background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%); 
+    /* Adds a diagonal gradient */
+    width: 100%; /* Makes the menu span the full screen width */
+    height: 100%; /* Makes the menu span the full screen height */
+    padding: 7rem 1.5rem 2.5rem 4rem; /* Adds internal spacing */
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Aligns children in a column */
+    justify-content: space-between; /* Spreads children evenly */
+    transition: left 0.5s; /* Smoothly animates the menu appearing */
   }
 }
 
-.nav-list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 3rem;
+.nav-list { 
+  display: flex; /* Uses flexbox for layout */
+  flex-direction: column; /* Aligns links vertically */
+  row-gap: 3rem; /* Adds space between links */
 }
 
-.nav-link {
-  color: var(--white-color);
-  font-size: var(--h2-font-size);
-  font-weight: var(--font-semi-bold);
-  transition: all 0.3s linear;
+.nav-link { 
+  color: var(--white-color); /* Sets the link color to white */
+  font-size: var(--h2-font-size); /* Sets the link font size */
+  font-weight: var(--font-semi-bold); /* Makes the text semi-bold */
+  transition: all 0.3s linear; /* Smoothly animates hover effects */
 }
 
-.nav-link:hover {
-  border-bottom: 2px solid #7b81ec;
-  padding-bottom: 2px;
+.nav-link:hover { 
+  border-bottom: 2px solid #7b81ec; /* Adds an underline effect */
+  padding-bottom: 2px; /* Moves text slightly up when hovered */
 }
 
-.nav_close {
-  color: var(--white-color);
-  position: absolute;
-  top: 1.15rem;
-  right: 1.5rem;
+.nav_close { 
+  color: var(--white-color); /* Sets the close button color to white */
+  position: absolute; /* Positions the close button over the menu */
+  top: 1.15rem; /* Aligns the button from the top */
+  right: 1.5rem; /* Aligns the button from the right */
 }
 
-.nav-social {
-  display: flex;
-  column-gap: 0.5rem;
-  align-self: flex-end;
+.nav-social { 
+  display: flex; /* Uses flexbox for layout */
+  column-gap: 0.5rem; /* Adds space between social icons */
+  align-self: flex-end; /* Aligns the icons to the right */
 }
 
-.social-link {
-  color: var(--white-color);
-  font-size: 1.5rem;
+.social-link { 
+  color: var(--white-color); /* Sets the icon color to white */
+  font-size: 1.5rem; /* Sets the icon size */
 }
 
 /* Show menu */
-
-.show-menu {
-  left: 0;
+.show-menu { 
+  left: 0; /* Moves the menu into view */
 }
 
 /* Background header */
-
-.bg-header {
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+.bg-header { 
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.3); /* Adds a shadow effect */
 }
 
 /* Home */
-
 .home-container,
 .data,
 .article,
 .images,
-.footer {
-  display: grid;
+.footer { 
+  display: grid; /* Uses grid layout for alignment */
 }
 
-.home-container {
-  padding-block: 7.5rem 2.5rem;
-  row-gap: 1.5rem;
+.home-container { 
+  padding-block: 7.5rem 2.5rem; /* Adds vertical padding */
+  row-gap: 1.5rem; /* Adds space between rows */
 }
 
 .data {
-  text-align: center;
+  text-align: center; /* Centers text within the element horizontally */
 }
 
 .subtitle {
-  font-size: var(--small-font-size);
+  font-size: var(--small-font-size); /* Sets the font size for subtitles */
 }
 
 .titles {
-  margin-block: 0.5rem 2rem;
+  margin-block: 0.5rem 2rem; /* Adds vertical margin (0.5rem on top, 2rem at the bottom) */
 }
 
 .title {
-  font-size: var(--biggest-font-size);
-  transform: translateY(10rem);
-  opacity: 0;
-  transition: transform 0.4s 0.3s, opacity 0.4s;
+  font-size: var(--biggest-font-size); /* Sets the largest font size for titles */
+  transform: translateY(10rem); /* Moves the element down by 10rem (animation start position) */
+  opacity: 0; /* Initially hides the title */
+  transition: transform 0.4s 0.3s, opacity 0.4s; 
+  /* Animates both transform and opacity over 0.4 seconds with a 0.3-second delay */
 }
 
 .title-1 {
-  color: var(--first-color);
+  color: var(--first-color); /* Applies the first color to this title */
 }
 
 .title-2 {
-  color: var(--second-color);
+  color: var(--second-color); /* Applies the second color to this title */
 }
 
 .title-3 {
-  color: var(--third-color);
+  color: var(--third-color); /* Applies the third color to this title */
 }
 
 .title-4 {
-  color: var(--fourth-color);
+  color: var(--fourth-color); /* Applies the fourth color to this title */
 }
 
 .title-5 {
-  color: var(--fifth-color);
+  color: var(--fifth-color); /* Applies the fifth color to this title */
 }
 
 .title-6 {
-  color: var(--sixth-color);
+  color: var(--sixth-color); /* Applies the sixth color to this title */
 }
 
 .button,
 .social,
 .controls,
 .navigation {
-  display: flex;
+  display: flex; /* Sets flexbox layout for buttons, social links, controls, and navigation */
 }
 
 .button {
-  justify-content: center;
-  align-items: center;
-  column-gap: 0.5rem;
-  font-weight: var(--font-semi-bold);
-  color: var(--title-color);
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Aligns content vertically */
+  column-gap: 0.5rem; /* Adds space between items inside the button */
+  font-weight: var(--font-semi-bold); /* Sets a semi-bold font weight */
+  color: var(--title-color); /* Sets the text color */
 }
 
 .button i {
-  font-size: 1.25rem;
-  transition: transform 0.5s;
+  font-size: 1.25rem; /* Sets icon font size */
+  transition: transform 0.5s; /* Animates transformations over 0.5 seconds */
 }
 
 .button:hover i {
-  transform: translateX(0.5rem);
+  transform: translateX(0.5rem); /* Moves the icon to the right by 0.5rem on hover */
 }
 
 .article {
-  width: 270px;
-  place-items: center;
-  padding-block: 1rem;
+  width: 270px; /* Sets the article width */
+  place-items: center; /* Centers items within the grid container */
+  padding-block: 1rem; /* Adds vertical padding */
 }
 
 .card {
-  position: relative;
+  position: relative; /* Positions child elements relative to this element */
 }
 
 .circle {
-  width: 270px;
-  height: 270px;
-  border-radius: 50%;
-  opacity: 0;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
-  transition: opacity 0.2s ease-out;
+  width: 270px; /* Sets the circle width */
+  height: 270px; /* Sets the circle height */
+  border-radius: 50%; /* Makes the element circular */
+  opacity: 0; /* Initially hides the circle */
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow around the circle */
+  transition: opacity 0.2s ease-out; /* Smoothly animates opacity changes */
 }
 
 .circle-1 {
-  background-color: var(--first-color);
+  background-color: var(--first-color); /* Sets the background to the first color */
 }
 
 .circle-2 {
-  background-color: var(--second-color);
+  background-color: var(--second-color); /* Sets the background to the second color */
 }
 
 .circle-3 {
-  background-color: var(--third-color);
+  background-color: var(--third-color); /* Sets the background to the third color */
 }
 
 .circle-4 {
-  background-color: var(--fourth-color);
+  background-color: var(--fourth-color); /* Sets the background to the fourth color */
 }
 
 .circle-5 {
-  background-color: var(--fifth-color);
+  background-color: var(--fifth-color); /* Sets the background to the fifth color */
 }
 
 .circle-6 {
-  background-color: var(--sixth-color);
+  background-color: var(--sixth-color); /* Sets the background to the sixth color */
 }
 
 .img-1,
 .img-2 {
-  position: absolute;
-  width: 200px;
-  filter: drop-shadow(0 20px 12px rgba(0, 0, 0, 0.4));
-  transition: transform 0.7s 0.2s cubic-bezier(0.2, 0.9, 0.3, 1.3), opacity 0.4s;
+  position: absolute; /* Positions the images absolutely within their parent */
+  width: 200px; /* Sets the width of the images */
+  filter: drop-shadow(0 20px 12px rgba(0, 0, 0, 0.4)); /* Adds a shadow effect to the images */
+  transition: transform 0.7s 0.2s cubic-bezier(0.2, 0.9, 0.3, 1.3), opacity 0.4s; 
+  /* Smoothly animates transformations and opacity */
 }
 
 .img-1 {
-  bottom: 7rem;
-  left: -1.5rem;
-  transform: translateX(-5rem) rotate(60deg);
-  opacity: 0;
+  bottom: 7rem; /* Positions the image 7rem from the bottom */
+  left: -1.5rem; /* Positions the image 1.5rem to the left */
+  transform: translateX(-5rem) rotate(60deg); /* Moves and rotates the image */
+  opacity: 0; /* Initially hides the image */
 }
 
 .img-2 {
-  bottom: 3rem;
-  right: -1.5rem;
-  transform: translateX(5rem) rotate(60deg);
-  opacity: 0;
+  bottom: 3rem; /* Positions the image 3rem from the bottom */
+  right: -1.5rem; /* Positions the image 1.5rem to the right */
+  transform: translateX(5rem) rotate(60deg); /* Moves and rotates the image */
+  opacity: 0; /* Initially hides the image */
 }
 
 .img-11 {
-  left: -0.5rem;
+  left: -0.5rem; /* Positions the image 0.5rem to the left */
 }
 
 .img-12 {
-  right: -1.2rem;
+  right: -1.2rem; /* Positions the image 1.2rem to the right */
 }
 
 .footer {
-  row-gap: 3rem;
+  row-gap: 3rem; /* Adds space between rows in the footer */
 }
 
 .social {
-  justify-content: center;
-  column-gap: 0.5rem;
+  justify-content: center; /* Centers social icons horizontally */
+  column-gap: 0.5rem; /* Adds space between social icons */
 }
 
 .link {
-  color: var(--title-color);
-  font-size: 1.5rem;
+  color: var(--title-color); /* Sets the color of the link */
+  font-size: 1.5rem; /* Sets the font size of the link */
 }
 
 .controls {
-  flex-direction: column;
-  align-items: center;
-  row-gap: 1.5rem;
+  flex-direction: column; /* Stacks controls vertically */
+  align-items: center; /* Centers controls horizontally */
+  row-gap: 1.5rem; /* Adds space between controls */
 }
 
 .navigation {
-  gap: 1rem;
+  gap: 1rem; /* Adds space between navigation items */
 }
+
 /* Swiper class */
 
 .swiper {
-  margin-inline: initial;
+  margin-inline: initial; /* Resets horizontal margins */
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  content: "";
+  content: ""; /* Removes default Swiper button content */
 }
 
 .swiper-pagination {
-  position: initial;
-  font-weight: var(--font-semi-bold);
+  position: initial; /* Resets the position of pagination */
+  font-weight: var(--font-semi-bold); /* Sets a semi-bold font weight */
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-  position: initial;
-  width: initial;
-  height: initial;
-  font-size: 1.25rem;
-  padding: 3px 20px;
+  position: initial; /* Resets the button position */
+  width: initial; /* Resets the button width */
+  height: initial; /* Resets the button height */
+  font-size: 1.25rem; /* Sets the font size of buttons */
+  padding: 3px 20px; /* Adds padding to buttons */
 }
 
 .swiper-button-prev {
-  color: var(--white-color);
-  background-color: #97d9e1;
+  color: var(--white-color); /* Sets the button text color to white */
+  background-color: #97d9e1; /* Sets a light blue background color */
 }
 
 .swiper-button-next {
-  color: var(--black-color);
-  background-color: #d9afd9;
+  color: var(--black-color); /* Sets the button text color to black */
+  background-color: #d9afd9; /* Sets a gradient purple background color */
 }
-
-/* #d9afd9  #97d9e1 */
-
 /* Swiper animation */
-
 .swiper-slide-active .title {
-  transform: translateY(0);
-  opacity: 1;
+  transform: translateY(0); /* Reset the vertical position for the title of the active slide */
+  opacity: 1; /* Make the title fully visible for the active slide */
 }
 
 .swiper-slide-active .circle {
-  opacity: 1;
+  opacity: 1; /* Make the circle element fully visible for the active slide */
 }
 
 .swiper-slide-active .img-1 {
-  transform: translateX(0) rotate(15deg);
-  opacity: 1;
+  transform: translateX(0) rotate(15deg); /* Bring the first image into place with a slight rotation */
+  opacity: 1; /* Make the first image fully visible */
 }
 
 .swiper-slide-active .img-2 {
-  transform: translateX(0) rotate(-30deg);
-  opacity: 1;
+  transform: translateX(0) rotate(-30deg); /* Bring the second image into place with a slight rotation in the opposite direction */
+  opacity: 1; /* Make the second image fully visible */
 }
 
 /* Scroll Bar */
-
 ::-webkit-scrollbar {
-  width: 0.6rem;
-  background-color: #b3b3b3;
+  width: 0.6rem; /* Set the width of the scrollbar */
+  background-color: #b3b3b3; /* Set the background color of the scrollbar track */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #999999;
+  background-color: #999999; /* Set the color of the scrollbar thumb (handle) */
 }
 
 /* Responsive */
 
 /* For small devices */
-
 @media screen and (max-width: 380px) {
   .container {
-    margin-inline: 1rem;
+    margin-inline: 1rem; /* Reduce horizontal margins for better fit on small screens */
   }
 
   .title {
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* Reduce the title font size for better readability on small screens */
   }
 
   .circle {
-    width: 220px;
-    height: 220px;
+    width: 220px; /* Reduce the width of the circle element */
+    height: 220px; /* Reduce the height of the circle element */
   }
 
   .img-1,
   .img-2 {
-    width: 160px;
+    width: 160px; /* Reduce the size of the images for small screens */
   }
 }
 
 /* For medium devices */
-
 @media screen and (min-width: 580px) {
   .footer {
-    margin-inline: 1.5rem;
-    grid-template-columns: repeat(2, max-content);
-    justify-content: space-between;
+    margin-inline: 1.5rem; /* Add horizontal margins for the footer on medium screens */
+    grid-template-columns: repeat(2, max-content); /* Create a two-column layout in the footer */
+    justify-content: space-between; /* Distribute footer content evenly */
   }
 
   .controls {
-    flex-direction: row;
-    column-gap: 2rem;
+    flex-direction: row; /* Align controls horizontally */
+    column-gap: 2rem; /* Add spacing between controls */
   }
 
   .navigation {
-    order: -1;
-    align-self: flex-end;
+    order: -1; /* Change the order of navigation to move it to the top */
+    align-self: flex-end; /* Align navigation to the bottom edge of its container */
   }
 
   .img-11 {
-    left: -1.2rem;
+    left: -1.2rem; /* Adjust the position of a specific image */
   }
 
   .img-12 {
-    right: -1.7rem;
+    right: -1.7rem; /* Adjust the position of another specific image */
   }
 }
 
 /* For large devices */
-
 @media screen and (min-width: 1020px) {
   .nav {
-    height: calc(var(--header-height) + 2rem);
+    height: calc(var(--header-height) + 2rem); /* Adjust the height of the navigation area */
   }
 
   .nav_toggle,
   .nav_close {
-    display: none;
+    display: none; /* Hide the toggle and close icons for navigation on large screens */
   }
 
   .nav-link {
-    font-size: var(--normal-font-size);
-    color: var(--title-color);
+    font-size: var(--normal-font-size); /* Set the font size of navigation links */
+    color: var(--title-color); /* Set the text color of navigation links */
   }
 
   .nav-social {
-    column-gap: 1rem;
+    column-gap: 1rem; /* Add spacing between social media icons in the navigation */
   }
 
   .social-link {
-    color: var(--title-color);
+    color: var(--title-color); /* Set the color for social media links */
   }
 
   .nav-menu {
-    display: flex;
-    column-gap: 3rem;
-    align-items: center;
+    display: flex; /* Display the navigation menu as a flex container */
+    column-gap: 3rem; /* Add spacing between menu items */
+    align-items: center; /* Align menu items vertically */
   }
 
   .nav-list {
-    flex-direction: row;
-    column-gap: 3rem;
+    flex-direction: row; /* Arrange navigation list items in a row */
+    column-gap: 3rem; /* Add spacing between list items */
   }
 
   .social {
-    display: none;
+    display: none; /* Hide the social section in navigation for large screens */
   }
 }
 
 @media screen and (min-width: 1180px) {
   .container {
-    margin-inline: auto;
+    margin-inline: auto; /* Center the container horizontally */
   }
 
   .home-container {
-    grid-template-columns: 460px 600px;
-    grid-template-rows: 470px;
-    align-items: center;
-    justify-content: center;
-    column-gap: 2rem;
-    row-gap: 6rem;
-    padding-top: 12rem;
+    grid-template-columns: 460px 600px; /* Define a grid layout with two columns of specific widths */
+    grid-template-rows: 470px; /* Set a fixed row height */
+    align-items: center; /* Center content vertically within the grid */
+    justify-content: center; /* Center content horizontally within the grid */
+    column-gap: 2rem; /* Add spacing between grid columns */
+    row-gap: 6rem; /* Add spacing between grid rows */
+    padding-top: 12rem; /* Add top padding to the home container */
   }
 
   .footer {
-    grid-column: 1/3;
-    margin-inline: 0;
+    grid-column: 1/3; /* Make the footer span across two columns */
+    margin-inline: 0; /* Remove horizontal margins */
   }
 
   .data {
-    text-align: initial;
+    text-align: initial; /* Align text to the start (left in LTR languages) */
   }
 
   .subtitle {
-    font-size: var(--normal-font-size);
+    font-size: var(--normal-font-size); /* Adjust the subtitle font size */
   }
 
   .titles {
-    margin-bottom: 3rem;
+    margin-bottom: 3rem; /* Add bottom margin to the titles */
   }
 
   .button {
-    justify-self: flex-start;
-    z-index: 2;
+    justify-self: flex-start; /* Align the button to the start (left) */
+    z-index: 2; /* Ensure the button appears above other elements */
   }
 
   .images {
-    position: absolute;
-    top: 9rem;
+    position: absolute; /* Position the images absolutely within their container */
+    top: 9rem; /* Position the images from the top of their container */
   }
 
   .card {
-    transform: translateX(15rem);
+    transform: translateX(15rem); /* Move the card horizontally */
   }
 
   .circle {
-    width: 580px;
-    height: 580px;
+    width: 580px; /* Increase the width of the circle element */
+    height: 580px; /* Increase the height of the circle element */
   }
 
   .img-1,
   .img-2 {
-    width: 430px;
+    width: 430px; /* Increase the size of the images */
   }
 
   .img-1 {
-    bottom: 14rem;
-    left: -3rem;
-    transform: translateX(-25rem) rotate(60deg);
+    bottom: 14rem; /* Adjust the bottom position of the first image */
+    left: -3rem; /* Adjust the left position of the first image */
+    transform: translateX(-25rem) rotate(60deg); /* Move and rotate the first image */
   }
 
   .img-2 {
-    bottom: 6rem;
-    right: -3rem;
-    transform: translateX(25rem) rotate(60deg);
+    bottom: 6rem; /* Adjust the bottom position of the second image */
+    right: -3rem; /* Adjust the right position of the second image */
+    transform: translateX(25rem) rotate(60deg); /* Move and rotate the second image */
   }
 
   .swiper-button-prev,
   .swiper-button-next {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Increase the font size of Swiper navigation buttons */
   }
 }
