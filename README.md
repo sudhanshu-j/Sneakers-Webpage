@@ -16,8 +16,6 @@ This project is a responsive, animated website featuring Swiper.js for image sli
 
 * [Contributing](#contributing)
 
-* [License](#license)
-
 ### Overview
 
 This project is designed to showcase a dynamic, user-friendly website with the following features:
